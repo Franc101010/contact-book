@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #e9ecef; margin: 0; padding: 20px; display: flex; justify-content: center; }
+        .container { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+        h2 { margin-top: 0; color: #333; text-align: center; }
+        .form-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
+        input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        button { padding: 10px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #218838; }
+        .search-bar { width: 95%; margin-bottom: 15px; background: #f8f9fa; }
+        .contact-list { list-style: none; padding: 0; margin: 0; }
+        .contact-card { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 6px; }
+        .contact-details { margin-bottom: 10px; }
+        .contact-details strong { display: block; font-size: 18px; color: #007bff; }
+        .contact-details span { display: block; color: #555; font-size: 14px; margin-top: 4px; }
+        .actions { display: flex; gap: 10px; }
+        .actions button { flex: 1; padding: 8px; font-size: 12px; }
+        .edit-btn { background: #ffc107; color: #333; }
+        .delete-btn { background: #dc3545; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>My Contact Book</h2>
+        
+        <div class="form-group">
+            <input type="hidden" id="contactId">
+            <input type="text" id="nameInput" placeholder="Full Name" required>
+            <input type="text" id="phoneInput" placeholder="Phone Number (e.g., 08012345678)" required>
+            <input type="email" id="emailInput" placeholder="Email Address" required>
+            <button id="saveBtn">Save Contact</button>
+        </div>
+
+        <hr>
+
+        <input type="text" id="searchInput" class="search-bar" placeholder="Search contacts by name...">
+
+        <ul id="contactList" class="contact-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
